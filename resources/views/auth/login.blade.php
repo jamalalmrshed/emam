@@ -12,21 +12,39 @@
                             @csrf
 
                             <div class="row mb-3">
-                                <label for="email"
-                                    class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                                <label for="identify"
+                                    class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address   OR mobile') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="email" type="email"
-                                        class="form-control @error('email') is-invalid @enderror" name="email"
-                                        value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                    <input id="identify" type="identify"
+                                        class="form-control @error('identify') is-invalid @enderror" name="identify"
+                                        value="{{ old('identify') }}"  autofocus>
 
-                                    @error('email')
+                                    @error('identify')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
                                     @enderror
                                 </div>
                             </div>
+                                 {{-- login by mobile phone --}}
+
+                            {{-- <div class="row mb-3">
+                                <label for="mobile"
+                                    class="col-md-4 col-form-label text-md-right">mobile</label>
+
+                                <div class="col-md-6">
+                                    <input id="mobile" type="text"
+                                        class="form-control @error('mobile') is-invalid @enderror" name="mobile"
+                                        value="{{ old('mobile') }}" required  autofocus>
+
+                                    @error('mobile')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div> --}}
 
                             <div class="row mb-3">
                                 <label for="password"
